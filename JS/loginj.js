@@ -28,7 +28,7 @@ const accounts = [
         username: "Isseiah Grace S. Hamto", 
         password: "Hamto", 
         lrn: "112233445566", 
-        gmail: "student3@arellano.edu.ph", 
+        gmail: "isseiahgraceh@gmail.com", 
         dateOfBirth: "2008-06-06", 
         gradeLevel: "12", 
         strand: "ICT", 
@@ -100,4 +100,5 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     } else {
         errorDiv.textContent = "Invalid username or password.";
     }
+
 });
