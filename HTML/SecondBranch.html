@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Declaration Form</title>
+    <link rel="stylesheet" href="../CSS/SecondBranchC.css">
+</head>
+<body style="background:url('../IMG/Arellano3.jpg') no-repeat center center fixed; background-size: cover;">
+    <div class="main2">
+    <button type="button"><a href="FirstBranch.html">Home</a></button>
+    </div>
+<form id="sheetdb-form" action="https://sheetdb.io/api/v1/o987edk4mfqpp" method="post">
+    <div class="container">
+        <div class="header">
+            <h1>Health Declaration Form</h1>
+            <p>Please report any symptoms that you or the other person is currently experiencing</p>
+        </div>
+        <div class="form-content">
+            <div class="section">
+                <h3>Personal Information</h3>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="data[Full Name]" required placeholder="Enter your full name" 
+                        pattern="[A-Za-z\s]+" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="gmail">Gmail</label>
+                        <input type="text" id="gmail" name="data[Gmail]" required placeholder="Enter your Gmail" 
+                        pattern="[a-z0-9._%+-]+@gmail\.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="sex">Sex</label>
+                        <select id="sex" name="data[Sex]" required>
+                            <option value="">Select Here</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input 
+                            type="number" 
+                            id="age" 
+                            name="data[Age]" 
+                            placeholder="Enter your age" 
+                            min="6" 
+                            max="80" 
+                            step="1" 
+                            required
+                        >
+                        <small class="error-message">Please enter an age between 6 and 80.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="grade">Grade/Level</label>
+                        <select id="grade" name="data[Grade/Level]" required readonly>
+                            <option value="">Select grade</option>
+                            <option value="Elementary">Elementary</option>
+                            <option value="Highschool">JHS</option>
+                            <option value="SHS">SHS</option>
+                            <option value="Teacher">Teacher</option>
+                            <option value="Staff">Staff</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="section">Grade/Strand/Section</label>
+                        <input type="text" id="section" name="data[Grade/Strand/Section]" placeholder="e.g., 12, ICT, 1P" required readonly>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center; margin-top: 10px;">
+                    <div class="form-group" style="text-align: center;">
+                        <label for="adviserName">Adviser/Teacher Name</label>
+                        <input type="text" id="adviserName" name="data[Adviser/Teacher Name]" placeholder="Enter adviser's name" required>
+                    </div>
+                </div>
+            </div>
+
+
+<div class="section">
+    <h3>Current Symptoms</h3>
+    <div class="symptoms-grid">
+        <div class="symptom-item">
+            <input type="checkbox" id="fever" name="data[Current Symptom One]" value="Fever">
+            <label for="fever">Fever/Lagnat</label>
+        </div>
+        <div class="symptom-item">
+            <input type="checkbox" id="cough" name="data[Current Symptom Two]" value="Cough">
+            <label for="cough">Cough/Ubo</label>
+        </div>
+        <div class="symptom-item">
+            <input type="checkbox" id="headache" name="data[Current Symptom Three]" value="Headache">
+            <label for="headache">Headache/Pananakit ng ulo</label>
+        </div>
+        <div class="symptom-item">
+            <input type="checkbox" id="soreThroat" name="data[Current Symptom Four]" value="Sore throat">
+            <label for="soreThroat">Sore throat/Pananakit at Nangangati ng Lalamunan</label>
+        </div>
+        <div class="symptom-item">
+            <input type="checkbox" id="runnyNose" name="data[Current Symptom Five]" value="Runny nose">
+            <label for="runnyNose">Runny nose/Sipon</label>
+        </div>
+        <div class="symptom-item">
+            <input type="checkbox" id="fatigue" name="data[Current Symptom Six]" value="Fatigue">
+            <label for="fatigue">Fatigue/Pagkapapod</label>
+        </div>
+        <div class="symptom-item">
+            <input type="checkbox" id="nausea" name="data[Current Symptom Seven]" value="Nausea">
+            <label for="nausea">Nausea/Pagduduwal at Pagsusuka</label>
+        </div>
+        <div class="symptom-item">
+            <input type="checkbox" id="dizziness" name="data[Current Symptom Eight]" value="Dizziness">
+            <label for="dizziness">Dizziness/Pagkahilo</label>
+        </div>
+        <div class="symptom-item">
+            <input type="checkbox" id="shortnessOfBreath" name="data[Current Symptom Nine]" value="Shortness of breath">
+            <label for="shortnessOfBreath">Shortness of breath/Kinakapos na Paghinga</label>
+        </div>
+        <div class="symptom-item">
+            <input type="checkbox" id="bodyAches" name="data[Current Symptom Ten]" value="Body aches">
+            <label for="bodyAches">Body aches/Pananakit ng Katawan</label>
+        </div>
+        <div class="symptom-item">
+            <input type="checkbox" id="stomachAches" name="data[Current Symptom Eleven]" value="Stomach aches">
+            <label for="stomachAches">Stomach ache/Pananakit ng Tiyan</label>
+        </div>
+    </div>
+<div class="custom-symptom">
+    <input type="text" id="customSymptom" placeholder="Or enter what you're currently experiencing or feeling right now in this box.">
+    <button type="button" id="addCustomSymptomBtn">Add</button>
+</div>
+                    <div class="medicine-needed">
+                        <label for="overtheCounterDrugs"><h2>Over The Counter Drugs</h2></label>
+                        <input type="text" id="medicineneeded" name="data[Medicine Needed]" readonly>
+                        <small id="medicineNote" style="display: none;">Medicines are auto-selected based on symptoms.</small>
+                    </div>
+                </div>
+                <div class="arrival">
+                    <label for="arrival"><h2>Arriving when?</h2></label>
+                    <select id="arrival" name="data[Arriving]" required>
+                        <option value="">Select Here</option>
+                        <option value="Now">Now</option>
+                        <option value="Later">Later</option>
+                    </select>
+                </div>
+
+<div id="selectedSymptoms" class="selected-symptoms" style="display: none;">
+    <h4>Selected Symptoms:</h4>
+    <div id="symptomTags"></div>
+</div>
+
+</div>
+<button type="submit" id="submitBtn">Submit Symptom Report</button>
+
+</div>
+</div>
+</form>
+<script src="../JS/secondbranch.js"></script>
+</body>
+</html>

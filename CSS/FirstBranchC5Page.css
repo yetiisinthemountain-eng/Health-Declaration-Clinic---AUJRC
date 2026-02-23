@@ -1,0 +1,167 @@
+/* CSS Variables for colors */
+:root {
+  --primary-blue: #007bff;
+  --dark-blue: #0056b3;
+  --light-blue: #e3f2fd;
+  --red: #dc3545;
+  --white: #ffffff;
+  --light-gray: #f8f9fa;
+  --gray: #6c757d;
+  --dark-gray: #343a40;
+}
+
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  color: var(--dark-gray);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+  color: var(--white);
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.main2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main2 button {
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.main2 button:hover {
+  background-color: #c82333;
+}
+
+.main2 button a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.main2 h1 {
+  font-size: 2.5em;
+  margin: 10px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main2 p {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* Guide container styles */
+.guide-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--light-gray);
+}
+
+.guide-container h2 {
+  color: var(--primary-blue);
+  font-size: 1.8em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 3px solid var(--primary-blue);
+  padding-bottom: 5px;
+}
+
+.guide-container h3 {
+  color: var(--dark-blue);
+  font-size: 1.4em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.guide-container p {
+  color: var(--dark-gray);
+  margin-bottom: 15px;
+}
+
+.guide-container ol, .guide-container ul {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.guide-container li {
+  margin-bottom: 10px;
+  color: var(--gray);
+}
+
+.guide-container li strong {
+  color: var(--dark-gray);
+}
+
+.guide-container em {
+  color: var(--red);
+  font-style: italic;
+}
+
+.guide-container a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.guide-container a:hover {
+  color: var(--dark-blue);
+  text-decoration: underline;
+}
+
+/* Section styles for better separation */
+section {
+  margin-bottom: 30px;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .guide-container {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+  }
+
+  .main2 h1 {
+    font-size: 2em;
+  }
+
+  .main2 p {
+    font-size: 1em;
+  }
+
+  .guide-container h2 {
+    font-size: 1.5em;
+  }
+
+  .guide-container h3 {
+    font-size: 1.2em;
+  }
+
+  .guide-container ol, .guide-container ul {
+    margin-left: 20px;
+  }
+}
