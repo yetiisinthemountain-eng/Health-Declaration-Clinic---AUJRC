@@ -213,6 +213,7 @@ document.querySelectorAll('select').forEach(select => {
 
 const COOLDOWN_TIME = 20 * 60 * 1000; // 20 minutes
 const submitBtn = document.getElementById('submitBtn');
+let isSubmitting = false; // Flag to prevent multiple clicks
 
 function getLastSubmissionTime() {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
@@ -280,7 +281,12 @@ window.addEventListener('DOMContentLoaded', function() {
 var form = document.getElementById('sheetdb-form');
 form.addEventListener("submit", e => {
     e.preventDefault();
-
+    
+    // Prevent spam clicks - check if already submitting
+    if (isSubmitting) {
+        return;
+    }
+    
     const status = canSubmit();
     if (!status.canSubmit) {
         alert(`You must wait ${formatRemainingTime(status.remaining)} before submitting again.`);
@@ -291,6 +297,11 @@ form.addEventListener("submit", e => {
         alert('Please check at least one symptom or type a custom symptom before submitting.');
         return;
     }
+
+    // Mark as submitting and disable button immediately
+    isSubmitting = true;
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Submitting...";
 
     const symptomsString = selectedSymptoms.join(', ');
     const hiddenInput = document.createElement('input');
@@ -332,6 +343,10 @@ form.addEventListener("submit", e => {
         location.reload();
     }).catch((error) => {
         console.error('Error submitting form:', error);
+        // Re-enable button on error so user can try again
+        isSubmitting = false;
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Submit Symptom Report";
         alert('There was an error submitting the form. Please try again.');
     });
 });
